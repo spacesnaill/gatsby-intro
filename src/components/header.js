@@ -12,14 +12,20 @@ const Header = () => (
       padding: 0.5rem; calc((100vw - 550px) / 2);
     `}
   >
-    <NavLink to="/">FEM Workshop</NavLink>
+    <NavLink fontWeight="bold" to="/">
+      FEM Workshop
+    </NavLink>
     <nav
       css={css`
         margin-top: 0;
       `}
     >
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/about">About</NavLink>
+      <NavLink to="/" activeClassName="current-page">
+        Home
+      </NavLink>
+      <NavLink to="/about" activeClassName="current-page">
+        About
+      </NavLink>
     </nav>
     {/** navigation */}
   </header>
