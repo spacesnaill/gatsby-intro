@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import usePosts from '../hooks/use-posts';
+import PostPreview from '../components/post-preview';
 
 export default () => {
   const posts = usePosts();
@@ -14,7 +15,7 @@ export default () => {
 
       <h2>Read my blog</h2>
       {posts.map(post => (
-        <pre>{JSON.stringify(post, null, 2)}</pre>
+        <PostPreview key={post.slug} post={post}></PostPreview>
       ))}
     </Layout>
   );
